@@ -1,4 +1,4 @@
-# buga_driver
+# Buga logistics driver application
 
 A new Flutter project.
 
