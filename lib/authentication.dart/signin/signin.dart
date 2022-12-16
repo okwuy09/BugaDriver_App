@@ -172,7 +172,8 @@ class _SignInState extends State<SignIn> {
                       child: Column(
                         children: [
                           MainButton(
-                            backgroundColor: ischecked
+                            backgroundColor: (_emailField.text.isNotEmpty &&
+                                    _passwordField.text.isNotEmpty)
                                 ? AppColor.primaryColor
                                 : AppColor.inactiveButton,
                             onTap: () async {
