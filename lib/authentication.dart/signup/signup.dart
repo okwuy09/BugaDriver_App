@@ -207,12 +207,15 @@ class _SignUpState extends State<SignUp> {
                                 ? AppColor.primaryColor
                                 : AppColor.inactiveButton,
                             onTap: () async {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const VerifyEmailPage(),
-                                ),
-                              );
+                              if (_globalFormKey.currentState!.validate()) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const VerifyEmailPage(),
+                                  ),
+                                );
+                              }
+
                               // final prefs =
                               //     await SharedPreferences.getInstance();
                               // prefs.setString('email', _emailField.text);

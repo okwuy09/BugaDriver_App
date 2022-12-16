@@ -176,6 +176,7 @@ class _SignInState extends State<SignIn> {
                                 ? AppColor.primaryColor
                                 : AppColor.inactiveButton,
                             onTap: () async {
+                              if (_globalFormKey.currentState!.validate()) {}
                               // final prefs =
                               //     await SharedPreferences.getInstance();
                               // prefs.setString('email', _emailField.text);
